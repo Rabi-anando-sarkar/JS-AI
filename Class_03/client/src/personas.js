@@ -1,0 +1,26 @@
+export const PERSONAS = {
+  ted: {
+    id: 'ted',
+    name: 'Ted',
+    fullName: 'Ted Mosby',
+    tagline: 'Architect. Hopeless romantic. Long-winded storyteller.',
+    tint: 'var(--ted-tint)',
+    accent: 'var(--ted-accent)',
+    initial: 'T',
+    placeholder: 'So there I was...',
+    emptyTitle: 'Kids, this is the story of a conversation',
+    emptyBody: "Ted hasn't said anything yet. Ask him about architecture, love, or a story with entirely too much detail.",
+  },
+  marshall: {
+    id: 'marshall',
+    name: 'Marshall',
+    fullName: 'Marshall Eriksen',
+    tagline: 'Lawyer. Environmentalist. Believer in the Bro Code.',
+    tint: 'var(--marshall-tint)',
+    accent: 'var(--marshall-accent)',
+    initial: 'M',
+    placeholder: 'Lawyered...',
+    emptyTitle: 'The floor is yours, counselor',
+    emptyBody: "Marshall hasn't said anything yet. Bring up the environment, law school, or Minnesota — he's got opinions.",
+  },
+}
