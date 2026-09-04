@@ -25,6 +25,7 @@ const outputFormat = z.object({
 async function main() {
     const response = await client.responses.parse({
         model: "gpt-5-nano",
+        tools: [],
         input: [
             {
                 role: "system",
@@ -36,11 +37,11 @@ async function main() {
             }
         ],
         text: {
-            format: zodTextFormat(outputFormat, "movie_analysis")
+            format: zodTextFormat(outputFormat, "movies")
         }
     })
 
-    const result = response.output_parsed.movies;
+    const result = response.output_parsed.movies.map(movie => movie.genres);
     console.log("Parsed Output:", result);
 }
 
