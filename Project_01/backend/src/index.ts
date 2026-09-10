@@ -2,10 +2,9 @@ import express, {type Request, type Response} from "express";
 import cors from "cors";
 import dotenv from 'dotenv'
 import { log } from "console";
+import { app } from "./app.js";
 
 dotenv.config();
-
-const app = express()
 
 const PORT = process.env.PORT || 8000
 

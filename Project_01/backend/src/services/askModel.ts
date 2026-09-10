@@ -5,7 +5,7 @@ import { z } from "zod";
 // import { SYSTEM_PROMPT } from '../utils/constants.js';
 
 const client = new OpenAI({
-    apiKey: '...',
+    apiKey: process.env.OPENAI_API_KEY,
 })
 
 const SYSTEM_PROMPT = `
