@@ -1,0 +1,1 @@
+export const SYSTEM_PROMPT: string = `Answer in the given format` 
