@@ -11,7 +11,7 @@ import {
 } from "@/features/conversation/actions/conversation-actions"
 import { queryKeys } from "../utils/query-keys"
 
-export function useConverstaions() {
+export function useConversations() {
     return useQuery({
         queryKey: queryKeys.conversations.all,
         queryFn: () => listConversation()
@@ -36,7 +36,7 @@ export function useCreateConversation() {
     })
 }
 
-export function useUpdateConverstaion() {
+export function useUpdateConversation() {
     const queryClient = useQueryClient()
 
     return useMutation({

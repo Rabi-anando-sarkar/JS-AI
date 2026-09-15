@@ -1,11 +1,15 @@
-import ModeToggle from "@/components/ui/mode-toggle"
+"use server"
 
-export default function Home() {
-    return (
-      <>
-        <h1>THEME</h1>
-        <ModeToggle/>
-      </>
-       
-    )
-  }
+import ModeToggle from "@/components/ui/mode-toggle"
+import { startNewChat } from "@/features/home/actions/start-new-chat"
+import { redirect } from "next/navigation"
+
+
+const page = async () => {
+    const conversationId = await startNewChat()
+
+    redirect(`/c/${conversationId}`)
+
+}
+
+export default page
